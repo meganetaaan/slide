@@ -1,12 +1,79 @@
-//section(data-background-iframe="http://www.htmlhifive.com/")
+mixin section-md
+  section(data-markdown data-separator="^\n---$")
+    script(type="text/template")
+      block
+
++section-md.
+  # Maintainable Presentations
+  Shinya Ishikawa
+  [@meganetaaan](https://www.twitter.com/meganetaaan)
+
+  ---
+
+  ## Maintainable Presentations
+  slides that are maintainable
+  * manage versions
+  * separate design and content
+
+  ---
+
+  ## text based slide framework
+  * reveal.js
+    * html slide framework
+    * heavy
+    * full-stacked
+  * remark.js
+    * markdown slide framework
+    * light
+
+  ---
+
+  ## main purpose
+  I wanna push all my slides on github.
+
+  ---
+
+  # I really really really wanna use multi-column-layout pleeeeeeez
+
+  ---
+
+  ### So why don't you use __css flex__
+  ```stylus
+  .row
+    display: flex
+    flex-direction: row
+    .col-1
+      flex-grow: 1
+    .col-2
+      flex-grow: 2
+    .col-3 
+      flex-grow: 3
+    .col-4
+      flex-grow: 4
+    .col-5
+      flex-grow: 5
+    .col-7
+      flex-grow: 7
+  ```
 
 section
-  h1 散布図
-  div.d3-scatter
-
-section
-  h1 棒グラフ
-  div.d3
+  h3 multi column layout with css flex
+  section: .row
+    .col-2
+      h4 fugafuga
+      h4 fugafuga
+      h4 fugafuga
+      h4 fugafuga
+    .col-8
+      p.
+        dummydummydummydummydummy
+        dummydummydummydummydummy
+        dummydummydummydummydummy
+        dummydummydummydummydummy
+        dummydummydummydummydummy
+        dummydummydummydummydummy
+        dummydummydummydummydummy
+        dummydummydummydummydummy
 
 section#fuga
   h1 リンク先

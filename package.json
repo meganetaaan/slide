@@ -1,10 +1,10 @@
 {
-  "name": "reveal-boilerplate",
-  "version": "1.0.0",
-  "description": "A boilerplate to create presentations using Reveal.JS, Gulp and more",
+  "name": "slides",
+  "version": "0.1.0",
+  "description": "slides made by meganetaaan",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "keywords": [
     "reveal",
@@ -12,11 +12,11 @@
     "stylus",
     "highlight"
   ],
-  "author": "Willian Justen de Vasconcellos",
+  "author": "Shinya Ishikawa",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.4.0",
-    "gulp": "^3.8.11",
+    "gulp": "^3.9.1",
     "gulp-cache": "^0.3.0",
     "gulp-concat": "^2.5.2",
     "gulp-gh-pages": "^0.5.2",
@@ -28,6 +28,7 @@
     "gulp-util": "^3.0.4"
   },
   "dependencies": {
-    "d3": "^3.5.16"
-  }
+    "jquery": "^3.1.1"
+  },
+  "private": "true"
 }

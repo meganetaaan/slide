@@ -10,17 +10,14 @@ Reveal.initialize({
 	dependencies: [
 		{ src: '/js/vendor/classList.js', condition: function() { return !document.body.classList; } },
 		{ src: 'js/vendor/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+    // Interpret Markdown in <section> elements
+    { src: 'js/vendor/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'js/vendor/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 		{ src: 'js/vendor/notes/notes.js', async: true }
 	]
 });
 
+/*
 Reveal.addEventListener('slidechanged', function(event) {               
-    console.log(event);
-     if(event.currentSlide.getAttribute('data-background-iframe')) {
-          document.querySelector('.reveal>.backgrounds').style.zIndex = 1;
-          document.querySelector('.reveal>.backgrounds>.slide-background.present').style.zIndex = 1;
-     } else {
-          document.querySelector('.reveal>.backgrounds').style.zIndex = 0;
-          document.querySelector('.reveal>.backgrounds>.slide-background.present').style.zIndex = 0;
-     }                  
 });
+*/
