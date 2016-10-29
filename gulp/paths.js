@@ -3,13 +3,13 @@
 module.exports = {
 
     source: {
+        pages: 'src/pages/**/*.jade',
         templates: 'src/templates/**/*.jade',
-        slides: 'src/slides/*.jade',
         js: 'src/js/**/*.js',
         styl: 'src/styl/**/*.styl',
         img: 'src/img/**/*',
         files: {
-          jade: 'src/templates/index.jade',
+          jade: 'src/pages/**/*.jade',
           styl: 'src/styl/main.styl',
           notes: 'src/js/vendor/notes/notes.html'
         }
