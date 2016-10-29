@@ -1,0 +1,197 @@
+mixin section-md
+  section(data-markdown data-separator="^\n---$" data-separator-vertical="^\n--$")
+    script(type="text/template")
+      block
+
++section-md.
+  # Maintainable Presentations
+  <img
+    style="margin: 0px; border: none; box-shadow: none;"
+    width="50px"
+    alt="meganetaaan's icon"
+    src="../img/meganetaaan.png" />
+  Shinya Ishikawa
+  (<a alt="meganetaaan's twitter account" target="_blank"
+    href="https://www.twitter.com/meganetaaan">@meganetaaan</a>)
+
+  ---
+
+  I wanna make my presentations __maintainable__, seriously.
+
+  ![tremendous slide versions](../img/tremendous_slide_versions.png)
+
+  ---
+
+  ## Maintainable Presentations
+  are slides that we can
+  * separate into structure and representation
+  * manage versions
+
+  ---
+
+  ## HTML Presentation technology
+  achieves maintainable presentations.
+  * separate slides into
+    - structure(html)
+    - representation(css)
+  * manage slide versions
+    - just like we usually do to our codes
+
+  ---
+
+  ## HTML Presentation Framework
+
+  ### [Reveal.js](http://lab.hakim.se/reveal-js/)
+  * html slide framework
+    - markdown as one of plugins
+  * full-stacked
+  * hook event
+
+  --
+
+  ## HTML Presentation Framework
+
+  ### Remark.js
+  * markdown slide framework
+  * light-weight
+
+  --
+
+  ## HTML Presentation Framework
+
+  ### etc.
+  // TODO: research recent example
+
+  ---
+
+  ## My HTML Presentation Stack
+
+  | Library/FW | Description |
+  | :--        | :--         |
+  | reveal.js | slide framework |
+  | markdown plugin | compile md to slides |
+  | stylus | alt css |
+  | jade | alt html |
+  | gulp | build tool |
+
+  ---
+
+  ## My HTML Presentation Workflow
+
+  ```sh
+  git clone https://github.com/meganetaaan/slide.git
+  cd slide
+  npm intall
+  git checkout -b create-slide-hogefuga
+  mkdir src/pages/hogefuga
+  npm start # start dev server
+  vim src/pages/hogefuga.jade
+  # some git commit/push thing
+  npm deploy # deploy pages to gh-pages
+  ```
+
+  ---
+
+  ## HTML Presentation pros/cons
+  ### pros :-)
+  * free and portable
+    - ready to export other formats(pdf, docx, ...)
+  * hackable with powerful __HTML5__ representations
+    - Dynamic SVG
+    - CSS animations
+    - WebSocket
+  * __happy to write!!!__
+
+section
+  h3 HTML5 representations example
+    p // TODO: d3.js example
+
++section-md.
+  ## HTML Presentation pros/cons
+  ### cons :-(
+  * so hard to layout
+    - multi columns
+    - (Japanese) word wrap
+    - no WYSWIG
+  * troublesome to create import figures
+
+  ---
+
+  Some said about HTML Presentation
+  ```
+  "I don't think it suits for Japanese-style presentations.
+  They tend to have as much information in a single slide."
+  ```
+  Partially I aglee with it. But...
+
+  ---
+
+  ## We can Ease pain
+  * layout with css3
+  * use web svg drawing tools
+
+  ---
+
+  ### ease pain of layout
+  Why don't you use __css flex__ to get multi-column.
+  ```stylus
+  .row
+    display: flex
+    flex-direction: row
+    .col-1
+      flex-grow: 1
+    .col-2
+      flex-grow: 2
+    .col-3 
+      flex-grow: 3
+    .col-4
+      flex-grow: 4
+    .col-5
+      flex-grow: 5
+    .col-7
+      flex-grow: 7
+  ```
+
++section-md.
+  ### multi column layout with css flex...
+  ```jade
+  h3 section1
+  .row
+    .col-2
+      h4.highlight subsec1
+      h4 subsec2
+      h4 subsec3
+      h4 subsec4
+    .col-8
+      p.
+        dummydummydummydummydummy
+        dummydummydummydummydummy
+  ```
+
+section
+  h3 looks like this.
+  h3 section1
+  .row
+    .col-2
+      h4.highlight subsec1
+      h4 subsec2
+      h4 subsec3
+      h4 subsec4
+    .col-8
+      p.
+        dummydummydummydummydummy
+        dummydummydummydummydummy
+  hr
+  small
+    | We have to use html/jade instead of markdown.<br>
+    | This is kinda hard decision of representation/structure tradeoff.
+
++section-md.
+  ## ease pain of figure
+  //TODO: create and export svgs with draw.io
+
+section
+  h1 Happy Hacking!
+  ul
+    li Twitter: #[a(alt="meganetaaan's twitter account" target="_blank") @meganetaaan]
+    li WebSite: #[a(href="https://meganetaaan.github.io") meganetaaan.github.io]
