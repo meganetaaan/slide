@@ -4,7 +4,8 @@
   "description": "slides made by meganetaaan",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "deploy": "gulp deploy-pages"
   },
   "keywords": [
     "reveal",
