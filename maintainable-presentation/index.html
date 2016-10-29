@@ -5,9 +5,10 @@
     <meta name="description" content="some description about the slides">
     <meta name="author" content="Shinya Ishikawa">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
   </head>
   <body>
+    <pre style="display:none"><code></code></pre>
     <div class="reveal">
       <div class="slides">
                 <section data-markdown data-separator="^
@@ -97,7 +98,7 @@
                     npm start # start dev server
                     vim src/pages/hogefuga.jade
                     # some git commit/push thing
-                    npm deploy # deploy pages to gh-pages
+                    npm run deploy # deploy pages to gh-pages
                     ```
                     
                     ---
@@ -210,7 +211,7 @@
           </div>
           <hr><small>
             We have to use html/jade instead of markdown.<br>
-            This is kinda hard decision of representation/structure tradeoff.</small>
+            Kinda hard decision of representation/structure tradeoff.</small>
         </section>
                 <section data-markdown data-separator="^
 ---$" data-separator-vertical="^
@@ -230,9 +231,9 @@
         </section>
       </div>
     </div>
-    <script src="/js/vendor/head.min.js"></script>
-    <script src="/js/vendor/reveal.min.js"></script>
-    <!-- script(src="js/vendor/d3.js")-->
-    <script src="/js/main.js"></script>
+    <script src="../js/vendor/head.min.js"></script>
+    <script src="../js/vendor/reveal.min.js"></script>
+    <!-- script(src="../js/vendor/d3.js")-->
+    <script src="../js/main.js"></script>
   </body>
 </html>
