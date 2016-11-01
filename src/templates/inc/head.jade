@@ -1,6 +1,12 @@
 head
-	meta(charset="UTF-8")
-	meta(name="description" content="some description about the slides")
-	meta(name="author" content="Shinya Ishikawa")
-	meta(name="viewport" content="width=device-width, initial-scale=1.0")
-	link(rel="stylesheet", type="text/css", href="../css/main.css")
+  meta(charset="UTF-8")
+  meta(name="description" content="some description about the slides")
+  meta(name="author" content="Shinya Ishikawa")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  link(rel="stylesheet", type="text/css", href="../css/main.css")
+  script.
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );

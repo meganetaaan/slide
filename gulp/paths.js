@@ -11,6 +11,7 @@ module.exports = {
         files: {
           jade: 'src/pages/**/*.jade',
           styl: 'src/styl/main.styl',
+          css: 'src/css/**/*.css',
           notes: 'src/js/vendor/notes/notes.html'
         }
 
