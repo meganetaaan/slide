@@ -9,6 +9,7 @@ var gulp         = require('gulp')
 module.exports = gulp.task('browser-sync', function () {
   var files = [
     paths.browserSync.html,
+    paths.browserSync.md,
     paths.browserSync.js,
     paths.browserSync.css,
     paths.browserSync.img
