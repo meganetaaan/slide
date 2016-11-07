@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="some description about the slides">
+    <meta name="author" content="Shinya Ishikawa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <style>
+      div.sample, div.sample * {
+      	margin: 10px;
+      	border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <pre style="display:none"><code></code></pre>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown="slides.md" data-separator="^
+---$" data-separator-vertical="^
+--$"></section>
+      </div>
+    </div>
+    <script src="../js/vendor/head.min.js"></script>
+    <script src="../js/vendor/reveal.min.js"></script>
+    <!-- script(src="../js/vendor/d3.js")-->
+    <script src="../js/main.js"></script>
+  </body>
+</html>
