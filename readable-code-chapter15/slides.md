@@ -108,6 +108,7 @@ class MinuteHourCounter {
 2つめの解釈が正解。より正確で詳細な説明にする。
 
 ~~~
+
 // 直近60秒間の累積カウントを返す
 ~~~
 
@@ -120,6 +121,86 @@ is 大事
 ---
 
 ### 15.3 試案1：素朴な解決策
+
+```JavaScript
+class MinuteHourCounter {
+  consturctor () {
+    this._events = []
+  }
+
+  add (count) {
+    this._events.push(new Event(count, Date.now()))
+  }
+```
+
+--
+
+```JavaScript
+  minuteCount () {
+    let count = 0
+    const nowSecs = Date.now()
+    for (let i = 0; i < this._events.length && this._events[this._events - 1 - i].time >= nowSecs - 60 * 1000; i++) {
+      count += this._events[this._events.length - 1 - i].count
+    }
+    return count
+  }
+
+```
+
+--
+
+```JavaScript
+  hourCount () {
+    let count = 0
+    const nowSecs = Date.now()
+    for (let i = 0; i < this._events.length && this._events[this._events - 1 - i].time >= nowSecs - 60 * 1000; i++) {
+      count += this._events[this._events.length - 1 - i].count
+    }
+    return count
+  }
+}
+```
+
+---
+
+#### このコードは理解しやすいか？
+
+* forループが少しうるさい
+* minuteCount()とhourCount()がほぼ同じ
+
+---
+
+#### 読みやすいバージョン
+
+```JavaScript
+  countSince (cutOff) {
+    let count = 0
+    const nowSecs = Date.now()
+    for (let rit = this._events.length - 1; rit >= 0; rit--) {
+      const event = this._events[rit]
+      if (event.time < cutOff) {
+        break
+      }
+      count += this._events[rit].count
+    }
+    return count
+  }
+  minuteCount () {
+    return this.countSince(Date.now() - 60 * 1000)
+  }
+  hourCount () {
+    return this.countSince(Date.now() - 60 * 60 * 1000)
+  }
+```
+
+---
+
+#### パフォーマンスの問題
+
+* これからも大きくなっていく。
+ * eventsにすべてのイベントを保持して、消していない
+* minuteCount()とhourCount()がおそすぎる
+ * O(n)
 
 ---
 
