@@ -1,6 +1,8 @@
 RustとWebAssembly
 ===
 
+---
+
 # Rust
 
 ---
@@ -83,19 +85,23 @@ https://www.rust-lang.org/ja-JP/ から引用
 - [プログラミング言語Rust](https://rust-lang-ja.github.io/the-rust-programming-language-ja/1.6/book/)
     - 公式ドキュメントの和訳。必読。
 
++++
+
 - [お気楽Rustプログラミング超入門](http://www.geocities.co.jp/SiliconValley-Oakland/1680/linux/rust.html)
     - 写経用。ソートに始まる基本的なアルゴリズムの実装例多数。更新頻度◎。
-
-+++
 
 - [Rust風にデザインパターン23種](http://keens.github.io/blog/2017/05/06/rustkazenidezainpata_n23tane/)
     - GoFがRustだとどうなるか。Javaからの入門として
 
 - keen([Twitter: @blackendgold](https://twitter.com/blackenedgold))
     - 国内トップRustacianの一人っぽい
-  
+
++++
+
 - [Awesome Rust(GitHub)](https://github.com/rust-unofficial/awesome-rust)
     - 意識高める用。
+    
+- [Rust JP(Slack)](https://rust-jp.herokuapp.com/)
 
 ---
 
